@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: birds-app-front-end-deployment
 spec:
-  replicas: 1
+  replicas: 100
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -15,7 +15,7 @@ spec:
         app: birds-app-front-end-ajaxvp
     spec:
       containers:
-        - image: 'ghcr.io/ajaxvp/birds-app-front-end:c7b113496801def80713e58642b497faaaf1e847'
+        - image: 'ghcr.io/ajaxvp/birds-app-front-end:4641c1b21d2c3d39a92ca528c2567a7c0bec5b20'
           name: birds-app-front-end
           ports:
             - containerPort: 80
